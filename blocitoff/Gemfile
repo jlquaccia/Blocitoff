@@ -49,3 +49,5 @@ gem 'spring',        group: :development
 
 # Devise
 gem 'devise'
+# Figaro
+gem 'figaro', '1.0'
