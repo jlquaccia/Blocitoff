@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 describe User do
-  include TestFactories
-
   describe "user sign up" do
     xit "signs a new user up" do
 

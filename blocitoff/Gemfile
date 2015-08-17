@@ -15,6 +15,7 @@ end
 # RSpec
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -55,3 +56,5 @@ gem 'spring',        group: :development
 gem 'devise'
 # Figaro
 gem 'figaro', '1.0'
+# Factory Girl
+gem 'factory_girl_rails', '~> 4.0'
