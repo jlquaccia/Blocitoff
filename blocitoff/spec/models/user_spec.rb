@@ -18,4 +18,28 @@ describe User do
 
     end
   end
+
+  describe "when signed in" do
+    xit "the top navigation changes to indicate a user is signed in" do
+
+    end
+
+    xit "a user is able to reset their password" do
+
+    end
+
+    xit "a user is redirected to their show page" do
+
+    end
+
+    xit "a users show page renders all of the appropriate user details" do
+
+    end
+  end
+
+  describe "when signed out" do
+    xit "the top navigation changes to indicate a user is signed out" do
+
+    end
+  end
 end
