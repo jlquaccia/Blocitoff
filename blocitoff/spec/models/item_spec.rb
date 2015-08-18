@@ -1,5 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Item, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Item do
+  describe "creating new items" do
+    xit "able to create multiple todo items" do
+
+    end
+
+    xit "todo items are displayed after creation" do
+
+    end
+  end
 end
