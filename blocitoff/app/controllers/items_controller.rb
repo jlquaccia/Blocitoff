@@ -5,10 +5,23 @@ class ItemsController < ApplicationController
 
     if @item.save
       flash[:notice] = "Item was saved."
-      redirect_to current_user
+      redirect_to @user
     else
       flash[:error] = "There was an error saving your item.  Please try again."
-      redirect_to current_user
+      redirect_to @user
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @item = @user.items.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Item was deleted."
+      render js: "$('##{@item.id}').hide()"
+    else
+      flash[:error] = "There was an error deleting that item.  Please try again."
+      redirect_to @user
     end
   end
 
