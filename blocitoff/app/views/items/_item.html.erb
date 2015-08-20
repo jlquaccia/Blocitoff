@@ -3,6 +3,7 @@
     <small>
       <%= item.name %>
       <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+      <em class="red">&lt;<%= "#{item.days_left} days until this item will self destruct" %>&gt;</em>
     </small>
   </div>
 <% end %>
