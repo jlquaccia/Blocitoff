@@ -1,8 +1,24 @@
-<div class="text-center title-border">
-  <h1>Blocitoff</h1>
-  <p>&lt; a self-destructing to-do list application &gt;</p>
-</div>
 <div class="text-center">
-  <br>
-  <h4>Coming Soon: things to do..</h4>
+  <script>
+    $(function(){
+        $(".element").typed({
+          strings: ["Do you need to get things done?", "But have trouble staying motivated?", "Introducing a todo list app that forces deadlines upon you.", "Welcome to Blocitoff, a self-destructing to-do list application."],
+          typeSpeed: 30,
+          backDelay: 1000
+        });
+    });
+  </script>
+  
+  <div class="text-wrapper">
+    <div class="text">
+      <span class="element">
+        <span class="typed-cursor"></span>
+      </span>
+    </div>
+  </div>
+  
+  <div class="sign_in_or_up_buttons">
+    <%= link_to("Sign In", new_user_session_path, class: 'sign_in_a sign_in_b sign_in_c') %> <!-- <span class="white">or</span> -->
+    <%= link_to("Sign Up", new_user_registration_path, class: 'sign_in_a sign_in_b sign_up_c') %>
+  </div>
 </div>
