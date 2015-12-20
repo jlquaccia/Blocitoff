@@ -1,9 +1,12 @@
-<%= content_tag :div, class: 'media', id: item.id do %>
+<%= content_tag :div, class: 'media list_item_styles', id: item.id do %>
   <div class="media-body">
     <small>
-      <%= item.name %>
-      <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
-      <em class="red">&lt;<%= "#{item.days_left} days until this item will self destruct" %>&gt;</em>
+      <span class="item_name"><%= item.name %></span>
+      <span class="right">
+        <em class="red">&lt;<%= "#{item.days_left} days until this item will self destruct" %>&gt;</em>
+        <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+      </span>
     </small>
+    <hr>
   </div>
 <% end %>

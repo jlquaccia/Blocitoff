@@ -1,5 +1,9 @@
-<h1 class="mt70">Welcome back <em><%= @user.name %></em>!</h1>
-
+<div class="text-center">
+  <h1>What do you have to do?</h1>
+  <small><%= pluralize(current_user.items.count, "more task") %> to complete!</small>
+</div>
 <br />
-<%= render partial: 'items/item', collection: @items %>
+<div class="list_items_wrapper">
+  <%= render partial: 'items/item', collection: @items %>
+</div>
 <%= render partial: 'items/form' %>

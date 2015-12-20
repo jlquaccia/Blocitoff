@@ -1,10 +1,20 @@
-<%= form_for [@user, Item.new] do |f| %>
-  <h3>Add an item</h3>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_area :name, rows: 8, class: 'form-control', placeholder: "Enter item" %>
-  </div>
-  <div class="form-group">
-    <%= f.submit "Create Item", class: 'btn btn-default' %>
-  </div>
-<% end %>
+<div class="form-wrapper">
+  <%= form_for [@user, Item.new] do |f| %>
+    <h3>New Task</h3>
+    <div class="form-group">
+      <%= f.text_field :name, class: 'form-control task_name_input', id: 'element', placeholder: 'insert task here..', autofocus: true, required: true %>
+    </div>
+    <div class="form-group">
+      <%= f.button "Add", class: 'add_btn add_btn_1 add_btn_1d' %>
+    </div>
+  <% end %>
+</div>
+<script>
+  $(function() {
+    $("#element").typed({
+      strings: ["insert task here.. like.. idk, do you need to get any milk?", ""],
+      typeSpeed: 30,
+      backDelay: 1000
+    });
+  });
+</script>

@@ -3,6 +3,7 @@
 
 body {
   background: url(rad-bg-1.jpg);
+  color: #fff;
 }
 
 .flash_message {
@@ -193,4 +194,113 @@ em.red {
 
 .delay3s {
   animation-delay: 3s;
+}
+
+.list_item_styles {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.list_items_wrapper {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+  color: #fff;
+  padding-top: 20px;
+  font-weight: 100;
+}
+
+.item_name {
+  font-size: 30px;
+}
+
+.right {
+  float: right;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.form-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.task_name_input {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.add_btn_1d {
+  overflow: hidden;
+
+  &:hover {
+    color: #DACFA0;
+  }
+
+  &:hover:after {
+    width: 90%;
+    opacity: 1;
+  }
+
+  &:after {
+    width: 0;
+    height: 103%;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.add_btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+.add_btn_1 {
+  border: 3px solid #fff;
+  color: #fff;
 }
