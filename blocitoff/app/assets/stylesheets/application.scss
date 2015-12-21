@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 body {
   background: url(rad-bg-1.jpg);
@@ -80,6 +81,7 @@ em.red {
 
   a {
     color: #fff;
+    padding: 0 15px;
   }
 }
 
@@ -192,13 +194,18 @@ em.red {
   margin-left: 110px;
 }
 
+.delay1s {
+  animation-delay: 0.5s;
+}
+
 .delay3s {
   animation-delay: 3s;
 }
 
 .list_item_styles {
   margin: 0;
-  padding: 0 10px;
+  padding: 15px 10px;
+  position: relative;
 }
 
 .list_items_wrapper {
@@ -207,8 +214,10 @@ em.red {
   background-color: rgba(0,0,0,0.1);
   border-radius: 5px;
   color: #fff;
-  padding-top: 20px;
+  // padding-top: 20px;
   font-weight: 100;
+  max-height: 352px;
+  overflow: auto;
 }
 
 .item_name {
@@ -230,7 +239,8 @@ em.red {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 30px;
+  height: 60px;
 }
 
 .add_btn_1d {
@@ -266,7 +276,7 @@ em.red {
   color: inherit;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
+  padding: 10px 20px;
   display: inline-block;
   margin: 15px 0;
   text-transform: uppercase;
@@ -303,4 +313,96 @@ em.red {
 .add_btn_1 {
   border: 3px solid #fff;
   color: #fff;
+}
+
+.container > .all_things_nav > li > a:hover {
+  border-color: transparent;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.overlay_checks {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 20px;
+
+  &:hover {
+    color: #E4DDA6;
+    text-decoration: none;
+  }
+}
+
+.checks {
+  color: #fff;
+  font-size: 30px;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#box:hover #overlay {
+  opacity: 1;
+}
+
+span#countdown {
+  font-size: 50px;
+}
+
+.skinny {
+  margin: 0;
+}
+
+span.little_span {
+  font-size: 20px;
+}
+
+.fat_hr {
+  border-top: 3px solid #fff;
+}
+
+p.p_body {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+// .instructions_wrapper {
+//   background-color: rgba(0,0,0,0.1);
+//   padding: 10px 15px;
+//   height: 100vh;
+// }
+
+.cancel_my_account {
+  &:hover {
+    background-color: #FF8278;
+    color: lighten(#000, 50%);
+    border-color: lighten(#000, 50%);
+  }
+}
+
+a {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.mt20 {
+  margin-top: 20px;
 }

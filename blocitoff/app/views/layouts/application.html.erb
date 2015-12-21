@@ -13,14 +13,15 @@
     <!-- NAV -->
     <ul class="nav nav-tabs all_things_nav">
       <li><%= link_to "Blocitoff", root_path %></li>
+      <li><%= link_to "Instructions", instructions_path %></li>
 
       <div class="pull-right user-info">
         <% if current_user %>
-          Hello <%= current_user.name || current_user.email %>! 
-          <%= link_to "Edit", edit_user_registration_path %> |
+          <%= link_to "Tasks", user_path(current_user) %>
+          <%= link_to "Account", edit_user_registration_path %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to "Sign In", new_user_session_path %> or
+          <%= link_to "Sign In", new_user_session_path %>
           <%= link_to "Sign Up", new_user_registration_path %>
         <% end %>
       </div>

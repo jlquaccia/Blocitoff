@@ -2,19 +2,21 @@
   <%= form_for [@user, Item.new] do |f| %>
     <h3>New Task</h3>
     <div class="form-group">
-      <%= f.text_field :name, class: 'form-control task_name_input', id: 'element', placeholder: 'insert task here..', autofocus: true, required: true %>
+      <%= f.text_field :name, class: 'form-control task_name_input', placeholder: 'insert task here..', autofocus: true, required: true %>
     </div>
     <div class="form-group">
       <%= f.button "Add", class: 'add_btn add_btn_1 add_btn_1d' %>
     </div>
   <% end %>
 </div>
+<!-- 
 <script>
-  $(function() {
-    $("#element").typed({
-      strings: ["insert task here.. like.. idk, do you need to get any milk?", ""],
-      typeSpeed: 30,
-      backDelay: 1000
-    });
-  });
+//   $(function() {
+//     $("#element").typed({
+//       strings: ["insert task here..", ""],
+//       typeSpeed: 30,
+//       backDelay: 1000
+//     });
+//   });
 </script>
+ -->

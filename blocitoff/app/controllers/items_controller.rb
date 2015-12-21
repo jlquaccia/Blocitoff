@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
     @item = @user.items.create(item_params)
 
     if @item.save
-      flash[:notice] = "Item was saved."
+      flash[:notice] = "Task was added!"
       redirect_to @user
     else
       flash[:error] = "There was an error saving your item.  Please try again."
@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = @user.items.find(params[:id])
 
     if @item.destroy
-      flash[:notice] = "Item was deleted."
+      flash[:notice] = "Task was completed!"
       render js: "$('##{@item.id}').hide()"
     else
       flash[:error] = "There was an error deleting that item.  Please try again."

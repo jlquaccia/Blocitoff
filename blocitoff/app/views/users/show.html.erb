@@ -1,6 +1,12 @@
 <div class="text-center">
   <h1>What do you have to do?</h1>
-  <small><%= pluralize(current_user.items.count, "more task") %> to complete!</small>
+  <% if current_user.items.count == 0 %>
+    <div class="fa fa-tasks fa-5x mt20"></div>
+    <br>
+    <small>a list of your tasks will appear here</small>
+  <% else %>
+    <small><%= pluralize(current_user.items.count, "more task") %> to complete!</small>
+  <% end %>
 </div>
 <br />
 <div class="list_items_wrapper">
