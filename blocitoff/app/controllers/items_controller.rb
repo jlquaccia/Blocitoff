@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = @user.items.find(params[:id])
 
     if @item.destroy
-      string_for_counter = "#{@user.items.count} more tasks to complete!"
+      string_for_counter = "#{ view_context.pluralize(@user.items.count, 'more task') } to complete!"
       flash[:notice] = "Task was completed!"
       render js: "$('##{@item.id}').hide(); $('.items_count').html('" + string_for_counter + "');"
     else
