@@ -1,7 +1,7 @@
 <%= content_tag :div, class: 'media list_item_styles', id: item.id do %>
   <div class="media-body">
     <small id="box">
-      <span class="item_name"><%= item.name %></span>
+      <div class="item_name"><%= item.name %></div>
       <span class="right">
         <%= link_to "", [@user, item], method: :delete, class: 'fa fa-times checks', remote: true %>
       </span>

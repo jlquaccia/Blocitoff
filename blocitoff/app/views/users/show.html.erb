@@ -3,9 +3,9 @@
   <% if current_user.items.count == 0 %>
     <div class="fa fa-tasks fa-5x mt20"></div>
     <br>
-    <small>a list of your tasks will appear here</small>
+    <small>( ( a list of your tasks will appear here ) )</small>
   <% else %>
-    <small><%= pluralize(current_user.items.count, "more task") %> to complete!</small>
+    <small class="items_count"><%= pluralize(current_user.items.count, "more task") %> to complete!</small>
   <% end %>
 </div>
 <br />

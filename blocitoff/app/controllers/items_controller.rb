@@ -17,8 +17,9 @@ class ItemsController < ApplicationController
     @item = @user.items.find(params[:id])
 
     if @item.destroy
+      string_for_counter = "#{@user.items.count} more tasks to complete!"
       flash[:notice] = "Task was completed!"
-      render js: "$('##{@item.id}').hide()"
+      render js: "$('##{@item.id}').hide(); $('.items_count').html('" + string_for_counter + "');"
     else
       flash[:error] = "There was an error deleting that item.  Please try again."
       redirect_to @user

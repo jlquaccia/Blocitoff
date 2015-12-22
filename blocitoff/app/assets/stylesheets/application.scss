@@ -222,11 +222,15 @@ em.red {
 
 .item_name {
   font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 480px;
+  text-overflow: ellipsis;
 }
 
 .right {
   float: right;
-  margin-top: 12px;
+  margin-top: -30px;
   font-size: 15px;
 }
 
@@ -327,7 +331,7 @@ em.red {
 .overlay_checks {
   color: #fff;
   font-size: 30px;
-  margin-top: 10px;
+  margin-top: 53px;
   margin-right: 20px;
 
   &:hover {
