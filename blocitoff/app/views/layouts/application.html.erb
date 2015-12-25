@@ -10,22 +10,46 @@
 </head>
 <body>
   <div class="container">
-    <!-- NAV -->
-    <ul class="nav nav-tabs all_things_nav">
-      <li><%= link_to "Blocitoff", root_path %></li>
-      <li><%= link_to "Instructions", instructions_path %></li>
+    <!-- HAMBURGER MOBILE NAV -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-      <div class="pull-right user-info">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main_nav">
+      <!-- NAV -->
+      <ul class="nav nav-tabs all_things_nav">
+        <li><%= link_to "Blocitoff", root_path %></li>
+        <li><%= link_to "Instructions", instructions_path %></li>
+
+        <!-- MOBILE ONLY -->
         <% if current_user %>
-          <%= link_to "Tasks", user_path(current_user) %>
-          <%= link_to "Account", edit_user_registration_path %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <li><%= link_to "Tasks", user_path(current_user), class: 'for_mobile_hamburger' %></li>
+          <li><%= link_to "Account", edit_user_registration_path, class: 'for_mobile_hamburger' %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'for_mobile_hamburger' %></li>
         <% else %>
-          <%= link_to "Sign In", new_user_session_path %>
-          <%= link_to "Sign Up", new_user_registration_path %>
+          <li><%= link_to "Sign In", new_user_session_path, class: 'for_mobile_hamburger' %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path, class: 'for_mobile_hamburger' %></li>
         <% end %>
-      </div>
-    </ul>
+        
+        <!-- DESKTOP ONLY -->
+        <div class="pull-right user-info">
+          <% if current_user %>
+            <%= link_to "Tasks", user_path(current_user) %>
+            <%= link_to "Account", edit_user_registration_path %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          <% end %>
+        </div>
+      </ul>
+    </div>
 
     <!-- FLASH MESSAGES -->
     <% if flash[:notice] %>

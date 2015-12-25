@@ -178,6 +178,45 @@ em.red {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .nav > li > .for_mobile_hamburger {
+    display: block !important;
+  }
+
+  .nav-tabs > li {
+    float: none;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .nav-tabs > li > a {
+    margin-right: 0;
+    transition: all 0.3s;
+    border-color: #fff;
+    border-radius: 5px;
+  }
+
+  .all_things_nav {
+    border-radius: 5px;
+    font-weight: 100;
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+
+  .nav-tabs > li > a:hover {
+    border-color: none;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .text {
     font-size: 30px;
@@ -188,6 +227,10 @@ em.red {
   .text {
     font-size: 25px;
   }
+}
+
+.nav > li > .for_mobile_hamburger {
+  display: none;  
 }
 
 .checkbox input[type="checkbox"] {
@@ -410,4 +453,16 @@ a {
 
 .mt20 {
   margin-top: 20px;
+}
+
+.icon-bar {
+  background-color: #fff;
+}
+
+.navbar-toggle {
+  border: 1px solid #fff;
+}
+
+.navbar-collapse.in {
+  overflow: initial;
 }
