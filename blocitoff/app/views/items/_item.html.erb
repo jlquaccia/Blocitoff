@@ -1,17 +1,21 @@
-<%= content_tag :div, class: 'media list_item_styles', id: item.id do %>
-  <div class="media-body">
-    <small id="box">
-      <div class="item_name"><%= item.name %></div>
-      <span class="right">
-        <%= link_to "", [@user, item], method: :delete, class: 'fa fa-times checks', remote: true %>
-      </span>
-      <div id="overlay">
-        <span id="countdown"><%= "#{item.days_left} days remaining" %></span>
-        <span class="right">
-          <%= link_to "", [@user, item], method: :delete, class: 'fa fa-check overlay_checks', remote: true %>
-        </span>
-      </div>
-    </small>
-    <hr class="skinny">
+<div class="mobile_task_list">
+  <div class="row">
+    <div class="col-md-12">
+      <%= content_tag :div, class: 'list_item_styles', id: item.id do %>
+        <small id="box">
+          <div class="item_name"><%= item.name %></div>
+          <span class="right">
+            <%= link_to "", [@user, item], method: :delete, class: 'fa fa-times checks mobile_checks', remote: true %>
+          </span>
+          <div id="overlay">
+            <span id="countdown"><%= "#{pluralize(item.days_left, 'day')} remaining" %></span>
+            <span class="right">
+              <%= link_to "", [@user, item], method: :delete, class: 'fa fa-check overlay_checks', remote: true %>
+            </span>
+          </div>
+        </small>
+        <hr class="skinny">
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>
