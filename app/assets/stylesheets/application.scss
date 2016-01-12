@@ -311,7 +311,8 @@ em.red {
   // padding-top: 20px;
   font-weight: 100;
   max-height: 352px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .item_name {
